@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply max-w-[80rem] w-full p-5 mx-auto;
+}
+
+@layer components {
+  .faq h2 {
+    @apply lg:text-7xl lg:font-extralight lg:mb-20;
+  }
+  .faq .faq__wrapper {
+    @apply lg:flex lg:gap-20;
+  }
+  .faq .faq__tab a {
+    @apply lg:text-xl;
+  }
+  .faq .faq__tab a:focus {
+    @apply lg:text-green lg:underline;
+  }
+
+  .faq__dropdown .accordion {
+    @apply lg:bg-gray lg:flex lg:items-center lg:justify-between lg:w-[55rem] lg:p-3 cursor-pointer;
+  }
+  .faq__dropdown .accordion p {
+    @apply lg:text-xl;
+  }
+  .faq__dropdown h4 {
+    @apply lg:text-2xl lg:mb-8;
+  }
+
+  .accordion__content {
+    @apply lg:h-0 ease-in duration-200 lg:w-[55rem] opacity-0 lg:pl-12 lg:pr-4 lg:text-justify;
+  }
+  .accordion__content.open {
+    @apply lg:h-[19rem] lg:pb-16 ease-in bg-gray duration-200 opacity-100 lg:pt-5;
+  }
+}
